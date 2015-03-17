@@ -8,10 +8,10 @@ body {
   margin: 0 auto;
 }
 
-body, html, main {
+body, html, main{
   /*important */
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 
 .header#nav li {
