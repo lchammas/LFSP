@@ -1,0 +1,27 @@
+//- sign_up.jade
+extends ./layout.jade
+
+block content
+  main(class='main_content')
+    div#mc_signup(class="form-style-2").offset-by-four.column
+      form#mc_signup_form(method='post', action='#mc_signup')
+        label(for='email', id='e-label') Email:
+        input(id="email", type='text', value='', class='input-field')
+        br
+        label(for='first_name') First Name:
+        input(id='first_name', type='text', value='', class='input-field')
+        br
+        label(for='surname') Last Name:
+        input(id='surname', type='text', vale='', class='input-field')
+        br
+        label Preferred Format:
+        br
+        br
+        label(for='html') HTML
+        input(id='html', type='radio', value='HTML', checked='checked', class='select-field')
+        label(for='txt') Text
+        input(id='txt', type='radio', value='Text', class='select-field')
+        br
+        br
+        input(id='submit', type='submit', value='Submit')
+

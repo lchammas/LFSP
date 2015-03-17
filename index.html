@@ -2,9 +2,11 @@
 <html>
 
   <head>
+    <link rel="stylesheet" type="text/css" href="../bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
     <meta charset="UTF-8"></meta>
-    <link rel="stylesheet" type="text/css" href="bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
 
   <title>LFSP: The London Forum for Science and Policy</title>
@@ -15,7 +17,6 @@
         <div id="nav">
           <ul>
             <li><a href-"#">HOME</a></li>
-            <li><a href-"#">ABOUT</a></li>
             <li><a href-"#">EVENTS</a></li>
             <li><a href-"#">POLICY</a></li>
             <li><a href-"#">CONTACT</a></li>
@@ -52,22 +53,27 @@
             <div class='col-md-4'>
               <div class='slider-nav'>
                 <ul class='slider-list'>
-                  <li class='dot active-dot'>Analyse Policy</li>
-                  <li class='dot'>Recommend solutions</li>
-                  <li class='dot'>Monthly talks</li>
-                  <li class='dot'>Publicise our conclusions</li>
-                  <li class='dot'>A focus on the big picture</li>
+                  <li id='analyse' class='dot active'>Analyse Policy</li>
+                  <li id='recommend' class='dot'>Recommend solutions</li>
+                  <li id='monthly' class='dot'>Monthly talks</li>
+                  <li id='pub' class='dot'>Publicise our conclusions</li>
+                  <li id='focus' class='dot'>A focus on the big picture</li>
                 </ul>
               </div>
             </div>
             <div class='col-md-8'>
               <div class='slider'>
-                <p>Some text</p>
+                <p id='at' class='active'>This means looking at both government science policy (like when to allow animal research or whether to intervene in the internet) as well as the use/misuse/nonuse of science in government policy (such as when formulating drugs policy or reforming the NHS). Individuals or working groups would choose areas of UK or International policy they’re interested in and evaluate them to produce the first part of what would become a policy paper.</p>
+                <p id='rec-text'>The next part is to think creatively to come up with some innovative and pragmatic solutions to the problems you identify.</p>
+                <p id='mo-text'>We’ll invite an expert guest in to help us discuss and debate the proposals for about an hour (20 minutes to present the paper, 20 minutes for the guest to respond and 20 minutes for questions from the floor).</p>
+                <p id='pub-text'>After the talk we’d publish the papers on our website and send them round to relevant bodies such as charities, select committees and government consultations.</p>
+                <p id='focus-text'>As a student think tank we simply don’t have the resources to compete with fully funded think tanks when it comes to nitty gritty policy details and large scale research, but what we can do is be innovative, daring and generally more interesting than other think tanks who are constrained by their benefactors</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+
 
   </body>
