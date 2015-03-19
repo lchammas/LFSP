@@ -447,14 +447,38 @@ form input[type=submit]:hover, input[type=button]:hover{
 }
 
 .team-active{
-  display: block;
+  display: none;
   padding: 10px;
   padding-bottom: 30px;
   width: 90%;
+  min-height: 50%;
+}
+
+.team-active.active{
+  display: block;
 }
 
 .person-active{
+  display: none;
+  width: 33%;
+  margin: 0 auto;
   float: left;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 40px;
+  z-index: 1;
+}
+
+.person-active img{
+  margin: 0 0 15px;
+  border-radius: 1000px;
+  width: 210px;
+  vertical-align: middle;
+  border: 0;
+  height: 210px;
+  cursor: pointer;
+}
+
+.person-active.active{
   display: block;
-  padding-left: 30px;
 }
