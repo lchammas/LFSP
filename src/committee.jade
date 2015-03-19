@@ -1,150 +1,95 @@
 //- committee.jade
-extends ./layout.jade
+extends ./src/layout.jade
+
+
+mixin person(id, src, title, name, href, email)
+  .person
+    img(src=src, id=id).dot
+    h3 #{title}
+    p #{name}
+    a(href=href) #{email}
 
 block content
-  main(class='main-content')
-    .scroll-heading
-      .container
-        h2 Committee
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/Headshot-chair.jpeg')
-        h2 Chair: Joseph Gafton
+  main.main-content
+    .container
+      h2(style='padding-bottom:10px;, margin-bottom:0px;') The Committee
 
-    .scrolling-bg.committee
-      .container
-        p.eleven.columns
-          |Hi! I’m Chair of LFSP and am responsible for overseeing the organisation’s activities as well as guiding policy groups and getting involved in workshops and events.
-          br
-          br
-          |I joined Imperial this year as a ‘Direct Entry’ student to the third year of the Medical course having finished my BA at Cambridge. I studied Preclinical Medicine for the first two years and History in third year focussing on Modern Political Thought, the African American Civil Rights Movement and Subsaharan Africa.
-          br
-          br
-          |I’m particularly interested in the politics of healthcare systems, science’s impact on gender identities and the tension between democracy and expert-led decision making. Distressed by most strenuous exercise, I play tennis in the summer and my spare time is filled mainly by musical endeavours on the piano, guitar + harmonica.
-          br
-          br
-          |<a href="mailto:joseph.gafton@lfsp.org.uk">joseph.gafton@lfsp.org.uk</a>
+      .team-active
+        .person-active.four.columns
+          img#active-img
+          h3#active-title
+          p#active-name
+          a#active-email
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/policy-director.jpeg')
-        h2 Director for Policy: Katie Bettany
+        .text.eight.columns
+          p.dot#chair-p
+            |Hi! I’m Chair of LFSP and am responsible for overseeing the organisation’s activities as well as guiding policy groups and getting involved in workshops and events.
+            br
+            br
+            |I joined Imperial this year as a ‘Direct Entry’ student to the third year of the Medical course having finished my BA at Cambridge. I studied Preclinical Medicine for the first two years and History in third year focussing on Modern Political Thought, the African American Civil Rights Movement and Subsaharan Africa.
+            br
+            br
+            |I’m particularly interested in the politics of healthcare systems, science’s impact on gender identities and the tension between democracy and expert-led decision making. Distressed by most strenuous exercise, I play tennis in the summer and my spare time is filled mainly by musical endeavours on the piano, guitar + harmonica.
 
-    .scrolling-bg.committee.small
-      .container#small
-        p.eleven.columns
-          |Oversees our projects and keeps everybody on the right track. Coordinate members interested in writing on similar policy issues into working groups. Discuss and confirm the aims of the policy paper. Communicate with group leaders to check paper progress. Check drafts + edit papers before publication (w/ Chair)
-          br
-          br
-          |<a href="mailto:katherine.bettany@lfsp.org.uk">katherine.bettany@lfsp.org.uk</a>
+          p.dot#dir-pol-p
+            |Oversees our projects and keeps everybody on the right track. Coordinate members interested in writing on similar policy issues into working groups. Discuss and confirm the aims of the policy paper. Communicate with group leaders to check paper progress. Check drafts + edit papers before publication (w/ Chair)
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/secretary.jpeg')
-        h2 Secretary: Yun Xing
+          p.dot#sec-p
+            |Organises events and communicates with members. Crucial to organising events (eg. Room bookings, circulating policy papers). Communications with members
 
-    .scrolling-bg.committee.small
-      .container#small
-        p.eleven.columns
-          |Organises events and communicates with members. Crucial to organising events (eg. Room bookings, circulating policy papers). Communications with members
-          br
-          br
-          |<a href='mailto:yun.xing@lfsp.org'>yun.xing@lfsp.org</a>
+          p.dot#tres-p
+            |I’m Nimai, a second year undergraduate reading Medicine at Imperial College. I therefore have an interest in health policy as well as scientific research. My outside interests include volunteering for various organisations as well as playing squash.
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/treasurer.jpeg')
-        h2 Treasurer: Nimai Vadgama
+          p.dot#DGDG-p
+            |I’m Chris, a 5th year studying medicine, having joined Imperial after completion of my BA at Magdalene College, Cambridge.
+            br
+            br
+            |As the Director of Guests, I am responsible for inviting speakers in the field of science policy to LFSP events. I also design, maintain and update the website and provide all-round technical support for members of LFSP. I also aid the design of Policy Paper templates and their transition to and distribution on the internet.
 
-    .scrolling-bg.committee.small
-      .container#small
-        p.eleven.columns
-          |I’m Nimai, a second year undergraduate reading Medicine at Imperial College. I therefore have an interest in health policy as well as scientific research. My outside interests include volunteering for various organisations as well as playing squash.
-          br
-          br
-          |<a href='mailto:nimai.vadgama@lfsp.org'>nimai.vadgama@lfsp.org</a>
+          p.dot#dir-for-pub1-p
+            |Hello, my name is Jordan Abdi and I am one of the Directors of Publicity. My role is to promote our work both to students around London and the people who make policy. I will be publicising events, talks and workshops around campus and via social media, so be sure to keep an eye out.
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/DG.jpg')
-        h2 Director for Guests + Director of Digital Communications: Chris Meiring
+          p.dot#dir-for-pub-aff-p
+            |Hi! I’m a second year Biologist and a keen believer of the student voice when it comes to science policy discussions. As the LFSP Director of Public Affairs it’s my job to promote our policy papers to policymakers and relevant stakeholders.
 
-    .scrolling-bg.committee.small
-      .container
-        p.eleven.columns
-          |I’m Chris, a 5th year studying medicine, having joined Imperial after completion of my BA at Magdalene College, Cambridge.
-          br
-          br
-          |As the Director of Guests, I am responsible for inviting speakers in the field of science policy to LFSP events. I also design, maintain and update the website and provide all-round technical support for members of LFSP. I also aid the design of Policy Paper templates and their transition to and distribution on the internet.
-          br
-          br
-          |<a href='mailto:chris.meiring@lfsp.org'>chris.meiring@lfsp.org.uk</a>
+          p.dot#dir-for-pub2-p
+            |Promotes our work both to students around London and the people who make policy. Publicising events, talks and workshops using:Twitter, Facebook, Posters
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/publicity-director.jpeg')
-        h2 Director for Publicity: Jordan Abdi
+          p.dot#pol-off1-p
+            |I am doing a Masters in Science Communication, having studied biochemistry for my undergraduate degree at Manchester. I have spent also three years working in open access publishing. I am interested in how science communicators – from journalists to politicians, and of course scientists themselves – share knowledge with the public, and how society can ensure that we are all more able to make informed decisions about science policy.
 
-    .scrolling-bg.committee.small
-      .container
-        p.eleven.columns
-          |Hello, my name is Jordan Abdi and I am one of the Directors of Publicity. My role is to promote our work both to students around London and the people who make policy. I will be publicising events, talks and workshops around campus and via social media, so be sure to keep an eye out.
-          br
-          br
-          |<a href='mailto:jordan.abdi@lfsp.org'>jordan.abdi@lfsp.org</a>
+          p.dot#dir-of-pub-p
+            |Hello, my name is Jasmine Munyard and I am one of the Directors of Publicity. My duty is to promote LFSP to both students and policy makers in order to bridge science with current policy matters – so make sure you watch out for upcoming events, talks and workshops!
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/public-affairs.jpeg')
-        h2 Director of Public Affairs: Hana Janedbar
+          p.dot#pol-off2-p
+            |Hi! I’m Jenny, an MSc student studying Environmental Technology (environmental economics and policy) here at Imperial. I am on the second year of a Marshall Scholarship, having completed an MPhil in Earth Science at Cambridge and my undergraduate degree in chemistry and earth science at Northwestern University in the US. I’m broadly interested in environmental policy, but my primary interests lie in climate/energy issues and sustainable development.
+            br
+            br
+            |As one of LFSP’s policy officers, it’s my job to facilitate the policy paper writing process, helping with everything from the formulation of initial ideas to the production of the final manuscript.
 
-    .scrolling-bg.committee.small
-      .container
-        p.eleven.columns
-          |Hi! I’m a second year Biologist and a keen believer of the student voice when it comes to science policy discussions. As the LFSP Director of Public Affairs it’s my job to promote our policy papers to policymakers and relevant stakeholders.
-          br
-          br
-          |<a href='mailto:hana.janebdar@lfsp.org.uk'>hana.janebdar@lfsp.org.uk</a>
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/policy-officer.jpg')
-        h2 Policy Officer: Angela Wipperman
+      .team
+        +person('chair' ,'../img/chair.jpeg', 'Chair', 'Joeseph Gafton', 'mailto:joseph.gafton@lfsp.org.uk' ,'joseph.gafton@lfsp.org.uk')
+           
+        +person('dir-pol' ,'../img/policy-director.jpeg', 'Policy Director', 'Katherine Bettany', 'mailto:katherine.bettany@lfsp.org.uk', 'katherine.bettany@lfsp.org.uk')
+          
+        +person('sec', '../img/secretary.jpeg', 'Secretary', 'Yun Xing', 'mailto:yun.xing@lfsp.org', 'yun.xing@lfsp.org')
 
-    .scrolling-bg.committee.small
-      .container
-        p.eleven.columns
-          |I am doing a Masters in Science Communication, having studied biochemistry for my undergraduate degree at Manchester. I have spent also three years working in open access publishing. I am interested in how science communicators – from journalists to politicians, and of course scientists themselves – share knowledge with the public, and how society can ensure that we are all more able to make informed decisions about science policy.
-          br
-          br
-          |<a href='mailto:angela.wipperman@lfsp.org.uk'>angela.wipperman@lfsp.org.uk</a>
+        +person('tres', '../img/treasurer.jpeg', 'Treasurer', 'Nimai Vadgama', 'mailto:nimai.vadgama@lfsp.org', 'nimai.vadgama@lfsp.org')
+        
+        +person('DGDG', '../img/DG.jpg', 'Director for Guests + Director of Digital Communications', 'Chris Meiring', 'mailto:chris.meiring@lfsp.org.uk', 'chris.meiring@lfsp.org.uk')
+        
+        +person('dir-for-pub1' ,'../img/publicity-director.jpeg', 'Director for Publicity', 'Jordan Abdi', 'mailto:jordan.abdi@lfsp.org', 'jordan.abdi@lfsp.org')
+          
+        +person('dir-for-pub-aff' ,'../img/public-affairs.jpeg', 'Director of Public Affairs', 'Hana Janedbar', 'mailto:hana.janebdar@lfsp.org.uk', 'hana.janebdar@lfsp.org.uk')
 
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/director-publicity.jpg')
-        h2 Director of Publicity: Jasmine Munyard
+        +person('dir-for-pub2' ,'../img/secretary.jpeg', 'Director for Publicity', 'Alice Tang', 'mailto:alice.tang@lfsp.org.uk', 'alice.tang@lfsp.org.uk')
+        
+        +person('pol-off1' ,'../img/policy-officer.jpg', 'Policy Officer', 'Angela Wipperman', 'mailto:angela.wipperman@lfsp.org.uk', 'angela.wipperman@lfsp.org.uk')
+          
+        +person('dir-of-pub', '../img/director-publicity.jpg', 'Director of Publicity', 'Jasmine Munyard', 'mailto:jasmine.munyard@lfsp.org.uk', 'jasmine.munyard@lfsp.org.uk')
+          
+        +person('pol-off2' ,'../img/policy-officer2.jpg', 'Policy Officer', 'Jenny Mills', 'mailto:jenny.mills@lfsp.org.uk', 'jenny.mills@lfsp.org.uk')
+          
 
-    .scrolling-bg.committee.small
-      .container
-        p.eleven.columns
-          |Hello, my name is Jasmine Munyard and I am one of the Directors of Publicity. My duty is to promote LFSP to both students and policy makers in order to bridge science with current policy matters – so make sure you watch out for upcoming events, talks and workshops!
-          br
-          br
-          |<a href='mailto:jasmine.munyard@lfsp.org.uk'>jasmine.munyard@lfsp.org.uk</a>
-
-    .fixed-bg.bg-committee
-      .intro
-        img(src='../img/policy-officer2.jpg')
-        h2 Policy Officer: Jenny Mills
-
-    .scrolling-bg.committee.small
-      .container
-        p.eleven.columns
-          |Hi! I’m Jenny, an MSc student studying Environmental Technology (environmental economics and policy) here at Imperial. I am on the second year of a Marshall Scholarship, having completed an MPhil in Earth Science at Cambridge and my undergraduate degree in chemistry and earth science at Northwestern University in the US. I’m broadly interested in environmental policy, but my primary interests lie in climate/energy issues and sustainable development.
-          br
-          br
-          |As one of LFSP’s policy officers, it’s my job to facilitate the policy paper writing process, helping with everything from the formulation of initial ideas to the production of the final manuscript.
-          br
-          br
-          |<a href='mailto:jenny.mills@lfsp.org.uk'>jenny.mills@lfsp.org.uk</a>

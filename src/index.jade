@@ -1,0 +1,51 @@
+//- index.jade
+extends ./layout.jade
+
+block content
+  main(class="main-content")
+    .fixed-bg.bg-1
+      .intro
+
+    .scrolling-bg.color-2
+      .container
+        h2 What We Do
+        .row
+          .four.columns
+            .slider-nav
+              .slider-list
+                ul
+                  li#who.dot.active Who We Are
+                  li#analyse.dot Analyse Policy
+                  li#recommend.dot Recommend Solutions
+                  li#monthly.dot Monthly Talks
+                  li#pub.dot Publicise Our Conclusions
+                  li#focus.dot A Focus on the Big Picture
+          .eight.columns
+            .slider
+              p#who-text.dot.active.
+                LFSP is a brand new student run think tank, born out of Imperial College London. We aim to bring the scientific rigour of Imperial to matters of current and future policy, and so deliver robust and reliable recommendations to the decision makers in Whitehall.
+              p#at.dot.
+                This means looking at both government science policy (like when to allow animal research or whether to intervene in the internet) as well as the use/misuse/nonuse of science in government policy (such as when formulating drugs policy or reforming the NHS). Individuals or working groups would choose areas of UK or International policy they’re interested in and evaluate them to produce the first part of what would become a policy paper.
+              p#rec.dot.
+                The next part is to think creatively to come up with some innovative and pragmatic solutions to the problems you identify.
+              p#mo.dot.
+                We’ll invite an expert guest in to help us discuss and debate the proposals for about an hour (20 minutes to present the paper, 20 minutes for the guest to respond and 20 minutes for questions from the floor).
+              p#pubt.dot.
+                After the talk we’d publish the papers on our website and send them round to relevant bodies such as charities, select committees and government consultations.
+              p#foct.dot.
+                As a student think tank we simply don’t have the resources to compete with fully funded think tanks when it comes to nitty gritty policy details and large scale research, but what we can do is be innovative, daring and generally more interesting than other think tanks who are constrained by their benefactors.
+
+    .bottom-nav.twelve.columns
+      .footer
+        .block.columns
+          a(href="../get_involved.html"): img(src='../img/LFSPTransLogo.png')
+          h4 Get Involved
+        .block.columns
+          a(href='../events.html'): img(src='../img/LFSPTransLogo.png')
+          h4 What's On
+        .block.columns
+          a(href='../policy.html'): img(src='../img/LFSPTransLogo.png')
+          h4 What We've Done
+        .block.columns
+          a(href='../committee.html'): img(src='../img/LFSPTransLogo.png')
+          h4 The Committee
