@@ -20,7 +20,8 @@ block content
                   li#monthly.dot Monthly Talks
                   li#pub.dot Publicise Our Conclusions
                   li#focus.dot A Focus on the Big Picture
-          .eight.columns
+
+          .eight.columns(style='margin-left:0;')
             .slider
               p#who-text.dot.active.
                 LFSP is a brand new student run think tank, born out of Imperial College London. We aim to bring the scientific rigour of Imperial to matters of current and future policy, and so deliver robust and reliable recommendations to the decision makers in Whitehall.
@@ -34,6 +35,15 @@ block content
                 After the talk we’d publish the papers on our website and send them round to relevant bodies such as charities, select committees and government consultations.
               p#foct.dot.
                 As a student think tank we simply don’t have the resources to compete with fully funded think tanks when it comes to nitty gritty policy details and large scale research, but what we can do is be innovative, daring and generally more interesting than other think tanks who are constrained by their benefactors.
+
+        .sign-up
+          .form(name='sign-up', method='post', role='form', action='/sign-up', ng-controller="NewsletterCtrl", class="ng-scope ng-invalid ng-invalid-required ng-dirty")
+            .div(tab-index='0', class='h-old text ng-isolate-scope ng-invalid ng-invalid-required ng-dirty', h-old-text ng-model='email', placeholder="Enter your email", name='email', spellcheck='false', required='required', ng-class="{ 'has-error': form.email.$invalid && submitted }")
+              .input-inner
+                .div(ng-show='!value', class='placeholder ng-binding') Enter your email
+                .input(type='text', ng-model='value', ng-change='update()', name='email', class='ng-pristine ng-valid', oldautocomplete='remove', autocomplete='off')
+              .input(type='submit', ng-click='submit($event', value='sign me up', class='subscribe')
+
 
     .bottom-nav.twelve.columns
       .footer
