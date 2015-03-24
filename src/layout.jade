@@ -12,6 +12,13 @@ html(lang='en')
   
   title LFSP: The London Forum for Science Policy
 
+    mixin sign-up
+      form(action="//lfsp.us7.list-manage.com/subscribe/post?u=a8e8c7d9cb82ce5edf08160d2&amp;id=e5c600b959" method='post' id='mc-subscribe-form' name='mc-subscribe-form' class='validate' target='_blank' novalidate)
+          .fieldview
+            input#email(type='email', name='EMAIL', value='', class='email', placeholder='Enter your email' required)
+            input#mc-subscribe(type='submit', value="sign me up", name='subscribe', class='button')
+
+
   body
     header#nav(class='header')
       ul

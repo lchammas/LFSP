@@ -294,35 +294,21 @@ h3 {
   color: #00B800;
 }
 
-
-form label{
-  display: inline-block;
-  color: #11A2A7;
-  padding-right: 20px;
+.fieldview{
+  display: block;
 }
 
-form #e-label{
-  padding-top: 150px;
-  padding-right: 72px;
+input#email{
+  width: 70%;
+  font-size: 12px;
+  border-color: #11A2A7;
 }
 
-form #submit{
-  margin-left: 70px;
-}
-
-form input[type=submit], input[type=button]{
-  border: none;
-  padding: 8px, 15px, 8px, 15px;
-  background: #00B800;
+input#mc-subscribe{
+  width: 30%;
+  background-color: #11A2A7;
   color: #fff;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-}
-
-form input[type=submit]:hover, input[type=button]:hover{
-  background: #00B800;
-  color: #fff;
+  border-color: #11A2A7;
 }
 
 .contact-page{
@@ -633,18 +619,18 @@ form input[type=submit]:hover, input[type=button]:hover{
 
 .sign-up{
   margin-top: 20px;
+  width: 50%;
   position: relative;
   display: block;
-  padding: 40px 0;
-  font-size: 22px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.sign-up.form{
-  display: block;
-}
-
-.sign-up.form.input{
-  display: block;
+.sign-up#get-involved{
+  margin-top: 0;
+  width: 70%;
+  float: left;
+  padding-left: 62px;
 }
 
 .central{
@@ -687,3 +673,4 @@ form input[type=submit]:hover, input[type=button]:hover{
 .central p a{
   text-decoration: none;
 }
+
