@@ -68,6 +68,10 @@ body, html, main{
   height: 40%;
 }
 
+.container p{
+  padding: 0 40px 0 40px;
+}
+
 
 .header{
   text-align: center;
@@ -227,8 +231,21 @@ h3 {
   text-align: center;
 }
 
+.event-page h4{
+  color: #00B800;
+  text-align: center;
+}
+
+.event-page a#buy{
+  width: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .event-page p{
   text-align: center;
+  padding: 0 40px 0 40px;
 }
 
 .event-page iframe{
@@ -363,17 +380,17 @@ input#mc-subscribe{
 
 .policy-list li.one{
   margin-left: 0;
-  margin-right: calc(0% + 4rem);
+  margin-right: calc(0% + 3rem);
 }
 
 .policy-list li.two{
   margin-left: 0;
-  margin-right: calc(0% + 4rem);
+  margin-right: calc(0% + 3rem);
 }
 
 .policy-list li.three{
   margin-left: 0;
-  margin-right: calc(0% + 4rem);
+  margin-right: calc(0% + 3rem);
 }
 
 .policy-list li{
@@ -381,7 +398,7 @@ input#mc-subscribe{
   display: inline-block;
   vertical-align: top;
   width: 30%;
-  height: 661px;
+  height: 525px;
   margin-bottom: 4rem;
   background-color: #fff;
 }
@@ -440,7 +457,7 @@ input#mc-subscribe{
 }
 
 .policy-image#two{
-  background-image: url('../img/secretary.jpeg');
+  background-image: url('../img/cleaning-scaled.png');
 }
 
 .policy-image#three{
@@ -456,7 +473,7 @@ input#mc-subscribe{
 }
 
 .policy{
-  height: 661px;
+  height: 420px;
   display: block;
 }
 
@@ -672,5 +689,10 @@ input#mc-subscribe{
 
 .central p a{
   text-decoration: none;
+}
+
+.central iframe {
+  height: 28px;
+  padding-left: 62px;
 }
 

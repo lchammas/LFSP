@@ -1,15 +1,5 @@
 var main = function(){
 
-  /*var Person = function(src, title, name, email){
-    this.Src = src;
-    this.Title = title;
-    this.Name = name;
-    this.email = email;
-  };
-
-  var chair = new Person('../img/chair.jpeg', 'Chair', 'Joeseph Gafton','joseph.gafton@lfsp.org.uk');
-  var dir_pol = new Person('../img/policy-director.jpeg', 'Policy Director', 'Katherine Bettany', 'katherine.bettany@lfsp.org.uk');*/
-
   var setPerson = function(src, title, name, email){
     $('#active-img').attr('src', src);
     $('#active-title').text(title);
@@ -54,67 +44,98 @@ var main = function(){
     $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#chair-p').addClass('active');
-    setPerson('../img/chair.jpeg', 'Chair', 'Joeseph Gafton', 'joseph.gafton@lfsp.org.uk');
+    setPerson('./img/chair.jpeg', 'Chair', 'Jordan Abdi', 'chair@lfsp.org.uk');
+  });
+
+  $("#vice").click(function(){
+    $('.team-active, .person-active').addClass('active');
+    $("p.dot").removeClass('active');
+    $('#vice-p').addClass('active');
+    setPerson('./img/vice.jpg', 'Vice Chair', 'Sinziana Giju', 'vice_chair@lfsp.org.uk');
   });
 
   $("#dir-pol").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#dir-pol-p').addClass('active');
-    setPerson('../img/policy-director.jpeg', 'Policy Director', 'Katherine Bettany', 'katherine.bettany@lfsp.org.uk');
+    setPerson('./img/director-policy.jpg', 'Director for Policy', 'Bradley Lonergan', 'director_for_policy@lfsp.org.uk');
   });
 
   $("#sec").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#sec-p').addClass('active');
-    setPerson('../img/secretary.jpeg', 'Secretary', 'Yun Xing', 'yun.xing@lfsp.org');
+    setPerson('./img/secretary.png', 'Secretary', 'Michael Edwards', 'secretary@lfsp.org');
   });
       
   $("#tres").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#tres-p').addClass('active');
-    setPerson('../img/treasurer.jpeg', 'Treasurer', 'Nimai Vadgama', 'nimai.vadgama@lfsp.org');
+    setPerson('./img/treasurer.jpeg', 'Treasurer', 'Alice Tang', 'treasurer@lfsp.org');
   });
      
   $("#DGDG").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#DGDG-p').addClass('active');
-    setPerson('../img/DG.jpg', 'Director for Guests + Director of Digital Communications', 'Chris Meiring', 'chris.meiring@lfsp.org.uk');
+    setPerson('./img/DG.jpg', 'Director for Guests', 'Neelakshi Armugam', 'director_for_guests@lfsp.org.uk');
   });
 
   $("#dir-for-pub1").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#dir-for-pub1-p').addClass('active');
-    setPerson('../img/publicity-director.jpeg', 'Director for Publicity', 'Jordan Abdi', 'jordan.abdi@lfsp.org');
+    setPerson('./img/dir-for-pub.png', 'Director of Publicity', 'Elise Donaldson', 'director_of_publicity@lfsp.org');
   });
 
   $("#dir-for-pub-aff").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#dir-for-pub-aff-p').addClass('active');
-    setPerson('../img/public-affairs.jpeg', 'Director of Public Affairs', 'Hana Janedbar', 'hana.janebdar@lfsp.org.uk');
+    setPerson('./img/public-affairs.jpeg', 'Director of Public Affairs', 'Hana Janedbar', 'director_for_pa@lfsp.org.uk');
   }); 
 
-  $("#dir-for-pub2").click(function(){
-    $("p.dot").removeClass('active');
-    $('#dir-for-pub2-p').addClass('active');
-    setPerson('../img/secretary.jpeg', 'Director for Publicity', 'Alice Tang', 'alice.tang@lfsp.org.uk');
-  });
-
   $("#pol-off1").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#pol-off1-p').addClass('active');
-    setPerson('../img/policy-officer.jpg', 'Policy Officer', 'Angela Wipperman', 'angela.wipperman@lfsp.org.uk');
+    setPerson('./img/policy-officer.jpg', 'Policy Officer', 'Angela Wipperman', 'policy_officer1@lfsp.org.uk');
   });
 
-  $("#dir-of-pub").click(function(){
+  $("#pub-off").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
-    $('#dir-of-pub-p').addClass('active');
-    setPerson('../img/director-publicity.jpg', 'Director of Publicity', 'Jasmine Munyard', 'jasmine.munyard@lfsp.org.uk');
+    $('#pub-off-p').addClass('active');
+    setPerson('./img/pub_off.jpg', 'Publicity Officer', 'Jasmine Munyard', 'publicity_officer@lfsp.org.uk');
+  });
+
+  $("#pub-off2").click(function(){
+    $('.team-active, .person-active').addClass('active');
+    $("p.dot").removeClass('active');
+    $('#pub-off2-p').addClass('active');
+    setPerson('./img/pub_off2.jpg', 'Publicity Officer', 'Chris Worsfold', 'publicity_officer2@lfsp.org.uk');
+  });
+
+  $("#pub-off3").click(function(){
+    $('.team-active, .person-active').addClass('active');
+    $("p.dot").removeClass('active');
+    $('#pub-off3-p').addClass('active');
+    setPerson('./img/pub_off3.jpg', 'Publicity Officer', 'Saliha Uludag', 'publicity_officer3@lfsp.org.uk');
   });
 
   $("#pol-off2").click(function(){
+    $('.team-active, .person-active').addClass('active');
     $("p.dot").removeClass('active');
     $('#pol-off2-p').addClass('active');
-    setPerson('../img/policy-officer2.jpg', 'Policy Officer', 'Jenny Mills', 'jenny.mills@lfsp.org.uk');
+    setPerson('./img/policy-officer2.jpg', 'Policy Officer', 'Jenny Mills', 'policy_officer2@lfsp.org.uk');
+  });
+
+  $("#web").click(function(){
+    $('.team-active, .person-active').addClass('active');
+    $("p.dot").removeClass('active');
+    $('#web-p').addClass('active');
+    setPerson('./img/web-editor.jpg', 'Web Editor', 'Sean Harbison', 'webmaster@lfsp.org.uk');
   });
 }
 
