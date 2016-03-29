@@ -1,0 +1,124 @@
+.no-background{
+	background-image:none;
+}
+
+.clickable:hover{
+	cursor: pointer;
+}
+
+.no-background p:first-child {
+	color: #003878;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    margin-bottom: 2px;
+    padding-top: 2px;
+}
+
+@media screen and (max-width: 555px){
+	.no-background p:first-child{
+		font-size: 1.4rem;
+	}
+}
+/*---------------------------------*/
+.button-back{
+	font-size: 2.0rem;
+	text-decoration: none;
+	padding-left: 15px;	
+	color: #0078FF;
+	display: inline-block;
+	position: absolute;
+	top: 27px;
+	left: 0px;
+	background: url('../images/arrow-back.svg') no-repeat left 3px;
+	background-size: 12px auto;
+}
+
+.form-control {
+   -moz-appearance: textfield;
+    border: 1px solid #999;
+    display: block;
+    float: left;
+    font-size: 1.8rem;
+    font-weight: 300;
+    height: 35px;
+    min-width: 40px;
+    padding: 5px;
+    width: 100%;
+}
+
+.form-control:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(102, 175, 233, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px
+		rgba(102, 175, 233, 0.6)
+}
+
+
+input:required {
+    box-shadow:none;
+}
+ .registration-form-set input[type='email']{
+	height: 35px;
+	border: 1px solid #999;
+   width: 300px;
+   width: 100%;
+    display:block;
+    padding: 5px;
+	font-size: 1.8rem;
+	font-weight: 300;
+    min-width: 40px;
+	float: left;
+	-moz-appearance:textfield;
+} 
+
+
+.has-success .help-block,.has-success .control-label,.has-success .radio,.has-success .checkbox,.has-success .radio-inline,.has-success .checkbox-inline
+	{
+	color: #3c763d
+}
+
+.has-success .form-control {
+	border-color: #3c763d;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+}
+
+.has-success .form-control:focus {
+	border-color: #2b542c;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px
+		#67b168;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168
+}
+
+.has-success .input-group-addon {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #3c763d
+}
+
+.untick-icon {
+
+	display: block;
+	width: 16px;
+	height: 12px;
+	position: absolute;
+	right: 42px;
+	top: 10px;
+	z-index: 300;
+	background: url('../images/cross-icon.png') no-repeat left top;
+	background-size: 16px 12px;
+}
+
+
+.form-control-static {
+	margin-bottom: 0
+}
+
+.documentopen {
+
+	height: 1000px;
+	width: 100%;		
+}

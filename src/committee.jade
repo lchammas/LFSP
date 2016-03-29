@@ -9,107 +9,135 @@ mixin person(id, src, title, name, href, email)
     p #{name}
     a(href=href) #{email}
 
+mixin person-short(src, title, name)
+  .person-short
+    img(src=src)
+    h3 #{title}
+    p #{name}
+
 block content
 
   main.main-content
-    h2(style='padding-bottom:10px;, margin-bottom:0px;') The Committee
+    .committee#current-committee.dot.active
+      .section
+        h2(style='padding-bottom:50px;, margin-bottom:0px;, width:70%;') The Committee 2015/16
 
-    .team-active
-      .person-active.four.columns
-        img#active-img
-        h3#active-title
-        p#active-name
-        a#active-email
 
-      .text.eight.columns
-        p.dot#chair-p
-          |Hello, my name is Jordan and I am the Chair of LFSP. I am ultimately responsible for overseeing the organisation’s activities and strategy. I will also be involved with the policy team in guiding policy groups whilst getting involved in workshops and events.
-          br
-          br
-          |I am currently a medical student planning on intercalating next year doing Bsc in Neuroscience and mental health. My main policy interests are health and education and how shifting social norms can influence risky behaviours. I look forward to meeting you at one of LFSP's various events.
+      .team-active
+        .person-active.four.columns
+          img#active-img
+          h3#active-title
+          p#active-name
+          a#active-email
 
-        p.dot#vice-p
-          |Hi!  I am the vice chair of this society and my role consists of assisting the chair when it comes to administrative business as well as aiding all the committee members with events in order to ensure the society is running smoothly. I am also a third year biologist with a strong interest in environmental policy and big data. 
+        .text.eight.columns
+          p.dot#chair-p
+            |Hello, my name is Jordan and I am the Chair of LFSP. I am ultimately responsible for overseeing the organisation’s activities and strategy. I will also be involved with the policy team in guiding policy groups whilst getting involved in workshops and events.
+            br
+            br
+            |I am currently a medical student planning on intercalating next year doing Bsc in Neuroscience and mental health. My main policy interests are health and education and how shifting social norms can influence risky behaviours. I look forward to meeting you at one of LFSP's various events.
 
-        p.dot#sec-p
-          |Hello all! I’m Michael, and I’m studying Chemistry, with some light LFSP admin work on the side. I’ve been interested in current affairs and politics since high school and find the politics of climate change and sustainability to be a particular area that needs more credible input from the scientific community and less from vested interests. Being involved with bodies such as the LFSP is a sure-fire way of ensuring the next generation of scientists are directly involved on the border between scientific innovation and real-world decisions made in our society that affect everyone. I look forward to working with you all.
+          p.dot#vice-p
+            |Hi!  I am the vice chair of this society and my role consists of assisting the chair when it comes to administrative business as well as aiding all the committee members with events in order to ensure the society is running smoothly. I am also a third year biologist with a strong interest in environmental policy and big data. 
 
-        p.dot#tres-p
-          |My name is Alice and I deal with the financial side of LFSP. Currently I'm a second year medical student at Imperial and will be focussing this committee year to finding strong sponsorship and balancing our books with both external and internal funding. This is my second year working with LFSP and I believe it's a great society, as London's first science policy student thinktank, we are at the vanguard and always pushing forward with ideas. 
+          p.dot#sec-p
+            |Hello all! I’m Michael, and I’m studying Chemistry, with some light LFSP admin work on the side. I’ve been interested in current affairs and politics since high school and find the politics of climate change and sustainability to be a particular area that needs more credible input from the scientific community and less from vested interests. Being involved with bodies such as the LFSP is a sure-fire way of ensuring the next generation of scientists are directly involved on the border between scientific innovation and real-world decisions made in our society that affect everyone. I look forward to working with you all.
 
-        p.dot#DGDG-p
-          |Hi! I’m this year’s Directory of Guests and am responsible for being the face LFSP when liaising with experts in the scientific community and inviting them to our organisation’s events. 
-          br
-          br
-          |I’m currently an Undergraduate Medical Student completing my final years at Imperial. As part of my Intercalated Bsc I studied Medical Sciences with Respiratory Sciences. When I’m not in the library, in my spare time you’ll find me swimming in Ethos, or running over Putney Bridge. (Or buried behind yet another book!)
-          br
-          br
-          |My interest in politics lies mainly in the organisation of healthcare systems across the world, and gender equality issues.
+          p.dot#tres-p
+            |My name is Alice and I deal with the financial side of LFSP. Currently I'm a second year medical student at Imperial and will be focussing this committee year to finding strong sponsorship and balancing our books with both external and internal funding. This is my second year working with LFSP and I believe it's a great society, as London's first science policy student thinktank, we are at the vanguard and always pushing forward with ideas. 
 
-        p.dot#dir-for-pub-aff-p
-          |Hi! I’m a second year Biologist and a keen believer of the student voice when it comes to science policy discussions. As the LFSP Director of Public Affairs it’s my job to promote our policy papers to policymakers and relevant stakeholders.
+          p.dot#DGDG-p
+            |Hi! I’m this year’s Directory of Guests and am responsible for being the face LFSP when liaising with experts in the scientific community and inviting them to our organisation’s events. 
+            br
+            br
+            |I’m currently an Undergraduate Medical Student completing my final years at Imperial. As part of my Intercalated Bsc I studied Medical Sciences with Respiratory Sciences. When I’m not in the library, in my spare time you’ll find me swimming in Ethos, or running over Putney Bridge. (Or buried behind yet another book!)
+            br
+            br
+            |My interest in politics lies mainly in the organisation of healthcare systems across the world, and gender equality issues.
 
-        p.dot#dir-for-pub1-p
-          |Hello! I'm Elise, a biotech student, having joined Imperial after studying a year of art and design at Central Saint Martins. 
-          br
-          br
-          |As Director of Publicity I am responsible for developing campaigns and coordinating public events. Alongside the publicity team, I'll be helping to ensure the work of LFSP is publicised to students across London and to relevant policy makers - so keep an eye out for our events, talks and workshops for opportunities to engage in discussions and to work on policy papers!
+          p.dot#dir-for-pub-aff-p
+            |Hi! I’m a second year Biologist and a keen believer of the student voice when it comes to science policy discussions. As the LFSP Director of Public Affairs it’s my job to promote our policy papers to policymakers and relevant stakeholders.
 
-        p.dot#pub-off2-p
-          |Hi, I'm Chris i'm a second year physicist and I'm one of the publicity officers at LFSP. My job is to help ensure all our events are well attended and to encourage student participation. I help to do this through supporting the rest of the publicity team, advertising on facebook, twitter and around campus.
+          p.dot#dir-for-pub1-p
+            |Hello! I'm Elise, a biotech student, having joined Imperial after studying a year of art and design at Central Saint Martins. 
+            br
+            br
+            |As Director of Publicity I am responsible for developing campaigns and coordinating public events. Alongside the publicity team, I'll be helping to ensure the work of LFSP is publicised to students across London and to relevant policy makers - so keep an eye out for our events, talks and workshops for opportunities to engage in discussions and to work on policy papers!
 
-        p.dot#pub-off3-p
-          |Hi, I'm Saliha and I am a final year Biology student. I keep you updated on facebook and twitter with events we have coming up, about papers we are publishing, and interesting policy news that I may come across!
+          p.dot#pub-off2-p
+            |Hi, I'm Chris i'm a second year physicist and I'm one of the publicity officers at LFSP. My job is to help ensure all our events are well attended and to encourage student participation. I help to do this through supporting the rest of the publicity team, advertising on facebook, twitter and around campus.
 
-        p.dot#pub-off-p
-          |Hello, my name is Jasmine Munyard and I am one of the Publicity Officers. My duty is to promote LFSP to both students and policy makers in order to bridge science with current policy matters – so make sure you watch out for upcoming events, talks and workshops!
+          p.dot#pub-off3-p
+            |Hi there! I am Eduardo Conesa-Pietscheck and I am a Geophysics student. I am currently serving as the Newsletter Editor of The London Forum for Science and Policy. The reason I joined this group is because I personally believe that scientists in-the-making should be well aware of the implications behind the ever-increasing pace of technological advancement. Amongst them of course, the need to have a supply of energy and raw materials with which to produce the artefacts this development demands. Stemming from this, my main policy interest arises: the importance of having a truly sustainable extractive industry.
 
-        p.dot#dir-pol-p
-          |My name is Bradley and I'm LFSP Director for Policy. I'm a 4th Year Medical Student, currently studying Neuroscience for my BSc. I have wide-ranging interests in science and politics but medicine is obviously the area that I know most about. I would like to bring new ideas to the position for policies that we can run, but also to facilitate as well as possible. I'd like to reach out to departments at Imperial that may not currently be aware of our work and to give them the opportunity to contribute. I look forward to working with the new committee and seeing us kick-on in the next academic year!
+          p.dot#pub-off-p
+            |Hello, my name is Jasmine Munyard and I am one of the Publicity Officers. My duty is to promote LFSP to both students and policy makers in order to bridge science with current policy matters – so make sure you watch out for upcoming events, talks and workshops!
 
-        p.dot#pol-off1-p
-          |I am doing a Masters in Science Communication, having studied biochemistry for my undergraduate degree at Manchester. I have spent also three years working in open access publishing. I am interested in how science communicators – from journalists to politicians, and of course scientists themselves – share knowledge with the public, and how society can ensure that we are all more able to make informed decisions about science policy.
+          p.dot#dir-pol-p
+            |My name is Bradley and I'm LFSP Director for Policy. I'm a 4th Year Medical Student, currently studying Neuroscience for my BSc. I have wide-ranging interests in science and politics but medicine is obviously the area that I know most about. I would like to bring new ideas to the position for policies that we can run, but also to facilitate as well as possible. I'd like to reach out to departments at Imperial that may not currently be aware of our work and to give them the opportunity to contribute. I look forward to working with the new committee and seeing us kick-on in the next academic year!
 
-        p.dot#pol-off2-p
-          |Hi! I’m Jenny, an MSc student studying Environmental Technology (environmental economics and policy) here at Imperial. I am on the second year of a Marshall Scholarship, having completed an MPhil in Earth Science at Cambridge and my undergraduate degree in chemistry and earth science at Northwestern University in the US. I’m broadly interested in environmental policy, but my primary interests lie in climate/energy issues and sustainable development.
-          br
-          br
-          |As one of LFSP’s policy officers, it’s my job to facilitate the policy paper writing process, helping with everything from the formulation of initial ideas to the production of the final manuscript.
+          p.dot#pol-off1-p
+            |Hi! I’m Tom, and I’m currently a postgraduate student in the Centre for Environmental Policy, studying for an MSc in Environmental Technology. With a background in Natural Sciences from Cambridge University and previous experience in environmental policy at the United Nations Environment Programme and with the UK Labour Party, I’m really interested in energy policy and conservation. As a Policy Officer, I’m here to assist in every stage of the policy paper writing process - from recruiting a team of writers to producing the final product.
 
-        p.dot#web-p
-          |Hi! My name is Sean and I'm this year's web editor. I focus on making sure the website is up to date and that it is all running well.
-          br
-          br
-          |I'm a 5th year medical student and I did my BSc in Neuroscience and Mental Health. I joined LFSP as I am keen for policy to be based on sensible scientific practice. I believe that this is one of the best ways to cause change that will really benefit our politics.
+          p.dot#pol-off2-p
+            |Hi! I’m Jenny, an MSc student studying Environmental Technology (environmental economics and policy) here at Imperial. I am on the second year of a Marshall Scholarship, having completed an MPhil in Earth Science at Cambridge and my undergraduate degree in chemistry and earth science at Northwestern University in the US. I’m broadly interested in environmental policy, but my primary interests lie in climate/energy issues and sustainable development.
+            br
+            br
+            |As one of LFSP’s policy officers, it’s my job to facilitate the policy paper writing process, helping with everything from the formulation of initial ideas to the production of the final manuscript.
 
-    
-    .container     
-      .team
-        +person('chair' ,'./img/chair.jpeg', 'Chair', 'Jordan Abdi', 'mailto:chair@lfsp.org.uk' ,'chair@lfsp.org.uk')
+          p.dot#web-p
+            |Hi! My name is Sean and I'm this year's web editor. I focus on making sure the website is up to date and that it is all running well.
+            br
+            br
+            |I'm a 5th year medical student and I did my BSc in Neuroscience and Mental Health. I joined LFSP as I am keen for policy to be based on sensible scientific practice. I believe that this is one of the best ways to cause change that will really benefit our politics.
 
-        +person('vice', './img/vice.jpg', 'Vice Chair', 'Sinziana Giju', 'mailto:vice_chair@lfsp.org.uk', 'vice_chair@lfsp.org.uk')
+      
+      .container     
+        .team
+          +person('chair' ,'./img/chair.jpeg', 'Chair', 'Jordan Abdi', 'mailto:chair@lfsp.org.uk' ,'chair@lfsp.org.uk')
+
+          +person('vice', './img/vice.jpg', 'Vice Chair', 'Sinziana Giju', 'mailto:vice_chair@lfsp.org.uk', 'vice_chair@lfsp.org.uk')
+            
+          +person('sec', './img/secretary.png', 'Secretary', 'Michael Edwards', 'mailto:secretary@lfsp.org', 'secretary@lfsp.org')
+
+          +person('tres', './img/treasurer.jpeg', 'Treasurer', 'Alice Tang', 'mailto:treasurer@lfsp.org', 'treasurer@lfsp.org')
           
-        +person('sec', './img/secretary.png', 'Secretary', 'Michael Edwards', 'mailto:secretary@lfsp.org', 'secretary@lfsp.org')
+          +person('DGDG', './img/DG.jpg', 'Director for Guests', 'Neelakshi Armugam', 'mailto:director_for_guests@lfsp.org.uk', 'director_for_guests@lfsp.org.uk')
 
-        +person('tres', './img/treasurer.jpeg', 'Treasurer', 'Alice Tang', 'mailto:treasurer@lfsp.org', 'treasurer@lfsp.org')
-        
-        +person('DGDG', './img/DG.jpg', 'Director for Guests', 'Neelakshi Armugam', 'mailto:director_for_guests@lfsp.org.uk', 'director_for_guests@lfsp.org.uk')
-
-        +person('dir-for-pub-aff' ,'./img/public-affairs.jpeg', 'Director of Public Affairs', 'Hana Janedbar', 'mailto:director_of_pa@lfsp.org.uk', 'director_of_pa@lfsp.org.uk')
-        
-        +person('dir-for-pub1' ,'./img/dir-for-pub.png', 'Director of Publicity', 'Elise Donaldson', 'mailto:director_of_publicity@lfsp.org', 'director_of_publicity@lfsp.org')
+          +person('dir-for-pub-aff' ,'./img/public-affairs.jpeg', 'Director of Public Affairs', 'Hana Janedbar', 'mailto:director_of_pa@lfsp.org.uk', 'director_of_pa@lfsp.org.uk')
           
-        +person('pub-off', './img/pub_off.jpg', 'Publicity Officer', 'Jasmine Munyard', 'mailto:publicity_officer1@lfsp.org.uk', 'publicity_officer1@lfsp.org.uk')
+          +person('dir-for-pub1' ,'./img/dir-for-pub.png', 'Director of Publicity', 'Elise Donaldson', 'mailto:director_of_publicity@lfsp.org', 'director_of_publicity@lfsp.org')
+            
+          +person('pub-off', './img/pub_off.jpg', 'Publicity Officer', 'Jasmine Munyard', 'mailto:publicity_officer1@lfsp.org.uk', 'publicity_officer1@lfsp.org.uk')
 
-        +person('pub-off2', './img/pub_off2.jpg', 'Publicity Officer', 'Chris Worsfold', 'mailto:publicity_officer2@lfsp.org.uk', 'publicity_officer2@lfsp.org.uk')
+          +person('pub-off2', './img/pub_off2.jpg', 'Publicity Officer', 'Chris Worsfold', 'mailto:publicity_officer2@lfsp.org.uk', 'publicity_officer2@lfsp.org.uk')
 
-        +person('pub-off3', './img/pub_off3.jpg', 'Publicity Officer', 'Saliha Uludag', 'mailto:publicity_officer3@lfsp.org.uk', 'publicity_officer3@lfsp.org.uk')
-        
-        +person('dir-pol' ,'./img/director-policy.jpg', 'Director for Policy', 'Bradley Lonergan', 'mailto:director_for_policy@lfsp.org.uk', 'director_for_policy@lfsp.org.uk')
-
-        +person('pol-off1' ,'./img/policy-officer.jpg', 'Policy Officer', 'Angela Wipperman', 'mailto:policy_officer1@lfsp.org.uk', 'policy_officer1@lfsp.org.uk')
+          +person('pub-off3', './img/editor.jpg', 'Newsletter Editor', 'Eduardo Conesa-Pietscheck', 'mailto:editor@lfsp.org.uk', 'editor@lfsp.org.uk')
           
-        +person('pol-off2' ,'./img/policy-officer2.jpg', 'Policy Officer', 'Jenny Mills', 'mailto:policy_officer2@lfsp.org.uk', 'policy_officer2@lfsp.org.uk')
-          
-        +person('web', './img/web-editor.jpg', 'Web Editor', 'Sean Harbison', 'mailto:webmaster@lfsp.org.uk', 'webmaster@lfsp.org.uk')
+          +person('dir-pol' ,'./img/director-policy.jpg', 'Director for Policy', 'Bradley Lonergan', 'mailto:director_for_policy@lfsp.org.uk', 'director_for_policy@lfsp.org.uk')
+
+          +person('pol-off1' ,'./img/pol-off-te.jpg', 'Policy Officer', 'Tom Evans', 'mailto:policy_officer1@lfsp.org.uk', 'policy_officer1@lfsp.org.uk')
+            
+          +person('pol-off2' ,'./img/policy-officer2.jpg', 'Policy Officer', 'Jenny Mills', 'mailto:policy_officer2@lfsp.org.uk', 'policy_officer2@lfsp.org.uk')
+            
+          +person('web', './img/web-editor.jpg', 'Web Editor', 'Sean Harbison', 'mailto:webmaster@lfsp.org.uk', 'webmaster@lfsp.org.uk')
+          .select
+            a.btn-large.waves-effect.waves-light#change-page Previous Committee
+
+    .committee#previous-committee.dot
+      h2(style='padding-bottom:50px;, margin-bottom:0px;, width:70%;') The Committee 2014/15
+      .container
+        .team
+          +person-short('./img/prev-chair.jpeg', 'Chair', 'Joseph Gafton')
+          +person-short('./img/vice.jpg', 'Secretary', 'Sinziana Giju')
+          +person-short('./img/prev-treas.jpg', 'Treasurer', 'Nimai Vadgama')
+          +person-short('./img/policy-director.jpeg', 'Director for Policy', 'Katherine Bettany')
+          +person-short('./img/chair.jpeg', 'Director of Publicity', 'Jordan Abdi')
+          +person-short('./img/DFG.jpg', 'Director for Guests', 'C.J. Meiring')
+          +person-short('./img/public-affairs.jpeg', 'Director of Public Affairs', 'Hana Janedbar')
+          +person-short('./img/policy-officer.jpg', 'Policy Officer', 'Angela Wipperman')
+          +person-short('./img/policy-officer2.jpg', 'Policy Officer', 'Jenny Mills')
+          +person-short('./img/pub_off.jpg', 'Publicity Officer', 'Jasmine Munyard')
+          .select
+            a.btn-large.waves-effect.waves-light#first-page Current Committee
 

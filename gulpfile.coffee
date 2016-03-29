@@ -1,8 +1,10 @@
 gulp = require 'gulp'
-gulpUtil = require 'gulp-util'
+#gulpUtil = require 'gulp-util'
 jade = require 'gulp-jade'
 sass = require 'gulp-sass'
 webpack = require 'gulp-webpack'
+jadeInheritance = require 'gulp-jade-inheritance'
+
 
 gulp.task 'scripts', ->
   js = webpack
@@ -22,13 +24,20 @@ gulp.task 'src', ->
     .pipe(jade())
     .pipe gulp.dest 'deploy/'
 
+gulp.task 'jade-inheritance', ->
+  gulp.src('src/layout.jade')
+    .pipe(jadeInheritance({basedir: 'src/'}))
+    .pipe(jade())
+    .pipe gulp.dest 'deploy/'
+
 gulp.task 'sass', ->
   gulp.src 'styles/style.scss'
     .pipe(sass())
     .pipe gulp.dest 'deploy/CSS/'
 
-gulp.task 'default', ['scripts' ,'src', 'sass'], ->
+gulp.task 'default', ['scripts' ,'src', 'jade-inheritance', 'sass'], ->
   gulp.watch 'scripts/*.coffee', ['scripts']
-  gulp.watch 'deploy/*.jade', ['src']
+  gulp.watch 'src/*.jade', ['src']
+  gulp.watch 'src/*.jade', ['jade-inheritance']
   gulp.watch 'materialize/sass/**/*.scss', ['sass']
   gulp.watch 'styles/*.scss', ['sass']
